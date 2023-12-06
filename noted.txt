@@ -1,0 +1,6 @@
+body/ navbar
+max-w-screen : full lebar
+h-screen : full 100vh
+justify-between : untuk melebarkan
+max-sm:hidden : menghilangkan di mobile
+
