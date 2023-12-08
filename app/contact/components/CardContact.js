@@ -1,9 +1,11 @@
-import React from "react";
-import { Button, ButtonGroup } from "flowbite-react";
+"use client";
+import { Button } from "flowbite-react";
 import { HiCloudDownload } from "react-icons/hi";
-import Image from "next/image";
 
 const CardContact = () => {
+  // const handleClick = () => {
+  //   console.log("apabel");
+  // };
   return (
     <div className="bg-primary py-10 md:px-10">
       <div className="p-5">
@@ -146,6 +148,7 @@ const CardContact = () => {
                     Generix Authorized Shipcenter
                   </div>
                 </div>
+                {/* <button onClick={handleClick}>abel</button> */}
               </div>
             </div>
           </div>
