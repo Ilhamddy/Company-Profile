@@ -30,7 +30,9 @@ const DetailBlog = async ({ params }) => {
             <div className="text-center text-xl font-extrabold md:text-start md:text-2xl"></div>
             <div className="text-center text-xl md:text-justify md:text-2xl">
               {/* {index.fields.description} */}
-              <h1 className="font-bold">Tegar ceo binal di follow guys</h1>
+              <h1 className="font-bold">
+                Tegar ceo binal di follow guys RAWRRR
+              </h1>
             </div>
           </div>
           <div className="col-span-2 flex items-center justify-center md:items-center">
