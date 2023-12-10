@@ -12,6 +12,11 @@ const nextConfig = {
         hostname: "img.freepik.com",
         port: "",
       },
+      {
+        protocol: "https",
+        hostname: "images.ctfassets.net",
+        port: "",
+      },
     ],
   },
 };

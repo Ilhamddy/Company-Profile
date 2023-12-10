@@ -4,20 +4,9 @@ import { SiConsul, SiHomeassistantcommunitystore } from "react-icons/si";
 import { GoCrossReference } from "react-icons/go";
 import { GiCargoCrate } from "react-icons/gi";
 import { FaShopify } from "react-icons/fa";
-import { contentfullConfig } from "@/utils/config";
+// import { contentfullConfig } from "@/utils/config";
 import NewsProduct from "./NewsProduct";
-
-const { baseUrlNews, spaceId, accessToken, environmentId } = contentfullConfig;
-
-const getEntries = async () => {
-  const response = await fetch(
-    `${baseUrlNews}/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&content_type=blog`,
-    // `${baseUrlNews}/spaces/${spaceId}/environments/${environmentId}/entries?access_token=${accessToken}&content_type=blog&order=fields.slug=${slug}`,
-    { cache: "no-store" },
-  );
-  return response.json();
-  // console.log(response.json());
-};
+import { getEntries } from "@/utils/contentfull";
 
 const Packages = async () => {
   const entries = await getEntries();
@@ -122,7 +111,13 @@ const Packages = async () => {
         <div>
           <div className=" grid grid-cols-1 md:grid-cols-3">
             {entries.items.map((entry, index) => {
-              return <NewsProduct key={index} data={entry} />;
+              return (
+                <NewsProduct
+                  key={index}
+                  data={entry}
+                  includes={entries.includes}
+                />
+              );
             })}
           </div>
         </div>
